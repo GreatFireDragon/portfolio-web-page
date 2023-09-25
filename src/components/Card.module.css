@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  max-width: 18.75rem; /* 300px / 16px = 18.75rem */
+  height: 13.4375rem; /* 215px / 16px = 13.4375rem */
+  background-color: #fff;
+  margin: 1.875rem 0.625rem; /* 30px / 16px = 1.875rem, 10px / 16px = 0.625rem */
+  padding: 1.25rem 0.9375rem; /* 20px / 16px = 1.25rem, 15px / 16px = 0.9375rem */
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.5); /* 5px / 16px = 0.3125rem, 20px / 16px = 1.25rem */
+  transition: 0.3s ease-in-out;
+  border-radius: 0.9375rem; /* 15px / 16px = 0.9375rem */
+}
+
+.card:hover {
+  height: 20rem; /* 320px / 16px = 20rem */
+}
+
+.card .image {
+  position: relative;
+  width: 16.25rem; /* 260px / 16px = 16.25rem */
+  height: 16.25rem; /* 260px / 16px = 16.25rem */
+
+  top: -2.5rem; /* -40px / 16px = -2.5rem */
+  left: 0.5rem; /* 8px / 16px = 0.5rem */
+  box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.2); /* 5px / 16px = 0.3125rem, 20px / 16px = 1.25rem */
+  z-index: 1;
+}
+
+.card .image img {
+  max-width: 100%;
+  border-radius: 0.9375rem; /* 15px / 16px = 0.9375rem */
+}
+
+.card .content {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover .content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
