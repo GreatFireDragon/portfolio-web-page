@@ -3,7 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import MyVerticalTimelineElement from "../ui/MyVerticalTimelineElement";
+import MyVerticalTimelineElement from "../ui/myVerticalTimelineElement";
 import { Icon } from "@iconify/react";
 
 function Experience() {
@@ -14,12 +14,7 @@ function Experience() {
   return (
     <section className="px-10 bg-cyan-100 ">
       <VerticalTimeline>
-        <MyVerticalTimelineElement
-          bgColor={accentColor}
-          textColor={whiteColor}
-          icon={""}
-          title="Creative Director"
-        />
+        <MyVerticalTimelineElement bgColor={accentColor} textColor={whiteColor} />
         <MyVerticalTimelineElement />
         <MyVerticalTimelineElement />
         <VerticalTimelineElement
