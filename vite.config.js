@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), eslint()],
   mimeTypes: {
     // Add the MIME type for the disallowed file extension
-    "text/html": ["md"],
+    // "text/html": ["md"],
   },
 });
