@@ -5,7 +5,6 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import MyVerticalTimelineElement from "../ui/MyVerticalTimelineElement";
 import { Icon } from "@iconify/react";
-import skillsList from "../data/skillsList.json";
 
 function Experience() {
   const style = window.getComputedStyle(document.documentElement);
