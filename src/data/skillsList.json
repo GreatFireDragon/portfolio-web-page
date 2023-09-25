@@ -1,0 +1,16 @@
+[
+  { "title": "Node", "icon": "mdi:nodejs" },
+  { "title": "React", "icon": "mdi:react" },
+  { "title": "HTML", "icon": "iconoir:html5" },
+  { "title": "CSS", "icon": "iconoir:css3" },
+  { "title": "JS", "icon": "ant-design:code-outlined" },
+  { "title": "Git", "icon": "mdi:git" },
+  { "title": "Figma", "icon": "iconoir:figma" },
+  { "title": "Tailwind", "icon": "mdi:tailwind" },
+  { "title": "1C", "icon": "file-icons:1c" },
+  { "title": "mySql", "icon": "mdi:database" },
+  { "title": "Rest API", "icon": "dashicons:rest-api" },
+  { "title": "Router", "icon": "simple-icons:reactrouter" },
+  { "title": "Redux", "icon": "akar-icons:redux-fill" },
+  { "title": "Query", "icon": "simple-icons:reactquery" }
+]
