@@ -9,3 +9,10 @@
   --color-white: #ecfeff;
   --color-black: #172554;
 }
+
+/* define tailwind class that combines a lot of other tailwind classes */
+@layer components {
+  .timeline-h3 {
+    @apply px-4 py-2 text-sm;
+  }
+}
