@@ -24,7 +24,7 @@ function Experience() {
   }
 
   return (
-    <section className="px-10 bg-cyan-100 ">
+    <section className="px-10 ">
       <VerticalTimeline lineColor={whiteColor} className="py-32">
         <VerticalTimelineElement
           icon={<Icon icon="fluent:design-ideas-20-filled" />}
