@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="flex flex-col items-center py-7 sm:py-10 md:py-14 bg-slate-900 text-slate-100 ">
+    <footer className="flex flex-col items-center py-7 sm:py-10 md:py-14 bg-zinc-800 text-zinc-100 ">
       <span className="flex items-center justify-center mb-2 text-sm uppercase sm:text-base md:text-lg ">
         Kuleshov Mikahil &copy; 2023{" "}
         {new Date().getFullYear() !== 2023 && `- ${new Date().getFullYear()}`}
