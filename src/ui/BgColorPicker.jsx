@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { TwitterPicker } from "react-color";
 import $ from "jquery";
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 function BgColorPicker() {
   // get css root color
   const style = window.getComputedStyle(document.documentElement);
   const initialBgColor = style.getPropertyValue("--color-bg");
 
-  const [bgColor, setBgColor] = useState(initialBgColor);
+  const [bgColor, setBgColor] = useLocalStorage("bgColor", initialBgColor);
   const [displayColorPicker, setDisplayColorPicker] = useState(true);
 
   useEffect(
     function () {
-      // jquery select body and change bg color
       $("body").css("background-color", bgColor);
     },
     [bgColor]
