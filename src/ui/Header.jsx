@@ -3,8 +3,9 @@ import { TypeAnimation } from "react-type-animation";
 function Header() {
   return (
     <header
-      className="flex flex-col items-center justify-center bg-cyan-100"
-      style={{ height: window.innerHeight }}>
+      className="flex flex-col items-center justify-center"
+      style={{ height: window.innerHeight }}
+    >
       <span className="mb-5 text-6xl sm:text-8xl">🍕</span>
       <h1 className="text-2xl sm:text-4xl">Kuleshov Mikhail</h1>
       <p className="text-lg sm:text-2xl">

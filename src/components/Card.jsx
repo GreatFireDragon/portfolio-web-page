@@ -10,7 +10,7 @@ function Card() {
             src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg"
           />
         </div>
-        <div className="absolute p-2 z-5 top-5">
+        <div className="p-2  z-5 top-5">
           <h3>This is content</h3>
           <p>My name hello everyone</p>
         </div>
