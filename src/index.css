@@ -22,7 +22,7 @@
     @apply text-sm italic font-light cursor-pointer sm:text-lg text-stone-400 md:text-xl;
   }
   .timeline-icon {
-    @apply transition-all bg-cyan-300 text-cyan-50 sm:scale-110 md:scale-125;
+    @apply transition-all bg-zinc-800 sm:scale-110 md:scale-125;
     box-shadow: 0 0 0 4px var(--color-white);
   }
   .timeline-icon svg {

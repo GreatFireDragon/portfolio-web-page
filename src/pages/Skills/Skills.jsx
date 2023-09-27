@@ -3,14 +3,12 @@ import skillsList from "../../data/skillsList.json";
 
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { useLocalStorage } from "@uidotdev/usehooks";
-import hexToComplimentary from "../../utils/hexToComplimentary";
 
 function Skills() {
   const [itemList, setItemList] = useLocalStorage("skillsList", skillsList);
 
   // get complimentary color for skills
   const [bgColor] = useLocalStorage("bgColor");
-  // const skillBgColor = hexToComplimentary("#27272a");
 
   // Function to update list on drop
   const handleDrop = (droppedSkill) => {

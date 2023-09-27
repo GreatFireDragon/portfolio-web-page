@@ -8,11 +8,12 @@ import $ from "jquery";
 import IconByTitle from "../ui/IconByTitle";
 import TextToTags from "../ui/TextToTags";
 import { Icon } from "@iconify/react";
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 function Experience() {
   const style = window.getComputedStyle(document.documentElement);
   var whiteColor = style.getPropertyValue("--color-white");
-  // var accentColor = style.getPropertyValue("--color-accent");
+  const [bgColor] = useLocalStorage("bgColor");
 
   function handleSubtextToggle(e) {
     const subtextElement = $(e.target)
@@ -25,8 +26,9 @@ function Experience() {
 
   return (
     <section className="px-10 ">
-      <VerticalTimeline lineColor={whiteColor} className="py-32">
+      <VerticalTimeline lineColor={whiteColor} className="pt-20">
         <VerticalTimelineElement
+          iconStyle={{ color: bgColor }}
           icon={<Icon icon="fluent:design-ideas-20-filled" />}
           iconClassName="timeline-icon"
           date="2020 — Present"
@@ -42,6 +44,7 @@ function Experience() {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
+          iconStyle={{ color: bgColor }}
           icon={<IconByTitle title="1C" />}
           iconClassName="timeline-icon"
           date="2022 — 2023"
@@ -56,6 +59,7 @@ function Experience() {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
+          iconStyle={{ color: bgColor }}
           icon={<IconByTitle title="React" />}
           iconClassName="timeline-icon"
           date="2023 — present"
@@ -70,6 +74,7 @@ function Experience() {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
+          iconStyle={{ color: bgColor }}
           icon={<Icon icon="healthicons:question-outline" />}
           iconClassName="timeline-icon"
           date={`${new Date().toLocaleDateString()} — Your team?`}
