@@ -1,12 +1,11 @@
 import Footer from "./ui/Footer";
 import Header from "./ui/Header";
-import Home from "./pages/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
 import BgColorPicker from "./ui/BgColorPicker";
 import GithubCorner from "./ui/GithubCorner";
+import Achievements from "./pages/Achievements";
 
 function App() {
   return (
@@ -15,11 +14,9 @@ function App() {
       <BgColorPicker />
       <Header />
 
-      <Home />
       <About />
-      <Projects />
+      <Achievements />
       <Skills />
-      {/* <Achievements /> */}
       <Experience />
 
       <Footer />

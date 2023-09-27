@@ -26,7 +26,7 @@ function Experience() {
 
   return (
     <section className="px-10 ">
-      <VerticalTimeline lineColor={whiteColor} className="pt-20">
+      <VerticalTimeline lineColor={whiteColor} className="pt-20 sm:py-20 md:py-32">
         <VerticalTimelineElement
           iconStyle={{ color: bgColor }}
           icon={<Icon icon="fluent:design-ideas-20-filled" />}
@@ -34,7 +34,6 @@ function Experience() {
           date="2020 — Present"
           dateClassName="timeline-date"
           onTimelineElementClick={(e) => handleSubtextToggle(e)}
-          className="cursor-pointer"
         >
           <h3 className="timeline-h3">University</h3>
           <h4 className="subtext timeline-h4">

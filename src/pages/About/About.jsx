@@ -5,7 +5,7 @@ function About() {
   const [bgColor] = useLocalStorage("bgColor");
 
   return (
-    <section className="flex flex-col items-center justify-center px-10 py-20 bg-zinc-800">
+    <section className="flex flex-col items-center justify-center px-10 py-20 md:py-64 bg-zinc-800">
       <h1
         style={{ color: bgColor }}
         className="pb-20 text-4xl font-bold tracking-widest uppercase"
