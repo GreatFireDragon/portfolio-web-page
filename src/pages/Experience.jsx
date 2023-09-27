@@ -3,31 +3,56 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import $ from "jquery";
 
 import IconByTitle from "../ui/IconByTitle";
 import TextToTags from "../ui/TextToTags";
+import { Icon } from "@iconify/react";
 
 function Experience() {
   const style = window.getComputedStyle(document.documentElement);
   var whiteColor = style.getPropertyValue("--color-white");
   // var accentColor = style.getPropertyValue("--color-accent");
 
-  const newIconStyle = {
-    boxShadow: `0 0 0 4px ${whiteColor}`,
-  };
+  function handleSubtextToggle(e) {
+    const subtextElement = $(e.target)
+      .closest(".vertical-timeline-element-content")
+      .find(".subtext");
+    if (subtextElement.length > 0) {
+      subtextElement.toggle();
+    }
+  }
 
   return (
     <section className="px-10 bg-cyan-100 ">
       <VerticalTimeline lineColor={whiteColor} className="py-32">
         <VerticalTimelineElement
-          iconStyle={newIconStyle}
-          icon={<IconByTitle title="React" />}
-          iconClassName="bg-cyan-300 text-cyan-50 transition-all md:hover:scale-110 md:hover:scale-125"
-          date="2020 - Present"
-          dateClassName="text-base sm:text-xl md:text-2xl sm:translate-x-4"
-          className="">
-          <h3 className="text-base font-bold sm:text-lg md:text-xl">University GUPTD</h3>
+          icon={<Icon icon="fluent:design-ideas-20-filled" />}
+          iconClassName="timeline-icon"
+          date="2020 — Present"
+          dateClassName="timeline-date"
+          onTimelineElementClick={(e) => handleSubtextToggle(e)}
+          className="cursor-pointer"
+        >
+          <h3 className="timeline-h3">University GUPTD</h3>
+          <h4 className="subtext timeline-h4">
+            Studied interface design, color theory, and corporate branding
+          </h4>
           <TextToTags text="Design, User Experience, Visual Design" />
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          icon={<IconByTitle title="1C" />}
+          iconClassName="timeline-icon"
+          date="2020 — Present"
+          dateClassName="timeline-date"
+          onTimelineElementClick={(e) => handleSubtextToggle(e)}
+        >
+          <h3 className="timeline-h3">1С programmer</h3>
+          <h4 className="subtext timeline-h4">
+            1C Software Developer, Professional in Technical Solutions
+          </h4>
+          <TextToTags text="SQL, 1C infostructure, transactions, solid, SKD" />
         </VerticalTimelineElement>
       </VerticalTimeline>
     </section>

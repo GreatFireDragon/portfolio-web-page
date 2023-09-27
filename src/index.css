@@ -2,28 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* root colors */
-:root {
-  --color-accent: #22d3ee;
-  --color-bg: #cffafe;
-  --color-white: #ecfeff;
-  --color-black: #172554;
-
-  --carousel-track-width: "----";
-  --windowRatio: "1";
-}
-
-/* define tailwind class that combines a lot of other tailwind classes */
 @layer components {
-  .timeline-h3 {
-    @apply px-4 py-2 text-sm;
+  :root {
+    --color-accent: theme(colors.cyan.400);
+    --color-bg: theme(colors.cyan.200);
+    --color-white: theme(colors.cyan.50);
+    --color-black: theme(colors.zinc.900);
+
+    --color-red: theme(colors.red.400);
+    --color-green: theme(colors.green.400);
+    --color-yellow: theme(colors.yellow.400);
+    --color-purple: theme(colors.purple.400);
+
+    --carousel-track-width: "----";
+    --windowRatio: "1";
   }
 
-  /* button shine */
+  .timeline-h3 {
+    @apply text-base font-bold cursor-pointer sm:text-lg md:text-xl;
+  }
+  .timeline-h4 {
+    @apply text-sm italic font-light cursor-pointer sm:text-lg text-stone-400 md:text-xl;
+  }
+  .timeline-icon {
+    @apply transition-all bg-cyan-300 text-cyan-50 sm:scale-110 md:scale-125;
+    box-shadow: 0 0 0 4px var(--color-white);
+  }
+  .timeline-icon svg {
+    @apply scale-110 sm:scale-125 md:scale-150;
+  }
+
+  .timeline-date {
+    @apply sm:mx-3 md:mx-5;
+  }
+
+  /* skill shine effect */
   .box {
     position: absolute;
-
-    /* transform: translate(-50%, -50%); */
 
     overflow: hidden;
     border-radius: 10%;

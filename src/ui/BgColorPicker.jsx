@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { TwitterPicker } from "react-color";
 import $ from "jquery";
 import { useLocalStorage } from "@uidotdev/usehooks";
@@ -8,8 +8,19 @@ function BgColorPicker() {
   const style = window.getComputedStyle(document.documentElement);
   const initialBgColor = style.getPropertyValue("--color-bg");
 
+  const bgColorsList = [
+    style.getPropertyValue("--color-bg"),
+    style.getPropertyValue("--color-red"),
+    style.getPropertyValue("--color-green"),
+    style.getPropertyValue("--color-yellow"),
+    style.getPropertyValue("--color-purple"),
+  ];
+
   const [bgColor, setBgColor] = useLocalStorage("bgColor", initialBgColor);
-  const [displayColorPicker, setDisplayColorPicker] = useState(true);
+  const [displayColorPicker, setDisplayColorPicker] = useLocalStorage(
+    "displayColorPicker",
+    true
+  );
 
   useEffect(
     function () {
@@ -37,7 +48,7 @@ function BgColorPicker() {
             triangle="top-right"
             width="200px"
             color={bgColor}
-            colors={["#F47373", "#37D67A", "#2CCCE4", "#dce775", "#ff8a65"]}
+            colors={bgColorsList}
             onChangeComplete={handleChangeColor}
           />
         </div>
