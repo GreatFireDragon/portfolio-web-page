@@ -5,10 +5,12 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
+import BgColorPicker from "./ui/BgColorPicker";
 
 function App() {
   return (
     <>
+      <BgColorPicker />
       <Header />
 
       <Home />
