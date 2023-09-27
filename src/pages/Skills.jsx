@@ -1,27 +1,16 @@
 import Skill from "../ui/Skill";
 import skillsList from "../data/skillsList.json";
-import { useEffect, useState } from "react";
+
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+import { useLocalStorage } from "@uidotdev/usehooks";
+import hexToComplimentary from "../utils/hexToComplimentary";
 
 function Skills() {
-  const [itemList, setItemList] = useState(skillsList);
+  const [itemList, setItemList] = useLocalStorage("skillsList", skillsList);
 
-  // set carousel css variables
-  useEffect(() => {
-    setTimeout(() => {
-      const windowHeight = window.innerHeight;
-      const windowWidth = window.innerWidth;
-      const carouselWidth = document.getElementById("carousel-track").offsetWidth;
-      document.documentElement.style.setProperty(
-        `--carousel-track-width`,
-        `-${carouselWidth}px`
-      );
-      document.documentElement.style.setProperty(
-        `--windowRatio`,
-        `${windowWidth / windowHeight}`
-      );
-    }, 1000);
-  }, []);
+  // get complimentary color for skills
+  // const [bgColor] = useLocalStorage("bgColor");
+  const skillBgColor = hexToComplimentary("#27272a");
 
   // Function to update list on drop
   const handleDrop = (droppedSkill) => {
@@ -33,13 +22,12 @@ function Skills() {
   };
 
   return (
-    <div className="relative px-8 py-32 overflow-hidden bg-zinc-800 text-zinc-800 sm:py-44 md:py-60 sm:px-12 md:px-16">
+    <div className="px-8 py-32 overflow-hidden bg-zinc-800 text-zinc-800 sm:py-44 md:py-60 sm:px-12 md:px-16">
       <DragDropContext onDragEnd={handleDrop}>
         <Droppable droppableId="list-container" direction="horizontal">
           {(provided) => (
             <div
-              id="carousel-track"
-              className="absolute flex flex-row items-center justify-center gap-5 overflow-hidden top-1/3 "
+              className="flex flex-row flex-wrap items-center justify-center gap-5 "
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
@@ -52,7 +40,7 @@ function Skills() {
                       {...provided.dragHandleProps}
                       {...provided.draggableProps}
                     >
-                      <Skill el={item} key={item.title} />
+                      <Skill bgColor={skillBgColor} el={item} key={item.title} />
                     </div>
                   )}
                 </Draggable>
@@ -63,12 +51,6 @@ function Skills() {
         </Droppable>
       </DragDropContext>
     </div>
-
-    // <section className="flex flex-row flex-wrap items-center justify-center gap-5 px-8 py-32 bg-zinc-800 text-zinc-800 sm:py-44 md:py-60 sm:px-12 md:px-16">
-    //   {itemList.map((el) => (
-    //     <Skill el={el} key={el.title} />
-    //   ))}
-    // </section>
   );
 }
 

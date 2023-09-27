@@ -33,8 +33,9 @@ function TextToTags({ text }) {
 
         return (
           <span
-            className={`px-2 py-1 uppercase leading-[0.75rem] transition-all text-[0.6rem] hover:scale-110 hover:mx-2 sm:text-xs md:text-base rounded-full ${colorVariants[color]}`}
-            key={el}>
+            className={`px-2 py-1 uppercase leading-[0.75rem] transition-all text-[0.6rem] hover:scale-110 hover:mx-2 sm:text-xs md:text-base sm:px-3 sm:py-2 rounded-full ${colorVariants[color]}`}
+            key={el}
+          >
             {el}
           </span>
         );

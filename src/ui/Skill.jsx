@@ -1,10 +1,11 @@
 import { Icon } from "@iconify/react";
 
-function Skill(props) {
-  const { el } = props;
-
+function Skill({ el, bgColor }) {
   return (
-    <span className="relative flex flex-col items-center px-3 py-2 transition-all box rounded-xl bg-amber-500">
+    <span
+      style={{ backgroundColor: bgColor }}
+      className="relative flex flex-col items-center px-3 py-2 transition-all box rounded-xl"
+    >
       <span className="text-5xl sm:text-6xl md:text-9xl">
         <Icon icon={el.icon}></Icon>
       </span>

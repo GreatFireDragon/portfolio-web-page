@@ -6,10 +6,12 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import BgColorPicker from "./ui/BgColorPicker";
+import GithubCorner from "./ui/GithubCorner";
 
 function App() {
   return (
     <>
+      <GithubCorner />
       <BgColorPicker />
       <Header />
 

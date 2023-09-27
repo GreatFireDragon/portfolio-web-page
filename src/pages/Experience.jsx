@@ -34,7 +34,7 @@ function Experience() {
           onTimelineElementClick={(e) => handleSubtextToggle(e)}
           className="cursor-pointer"
         >
-          <h3 className="timeline-h3">University GUPTD</h3>
+          <h3 className="timeline-h3">University</h3>
           <h4 className="subtext timeline-h4">
             Studied interface design, color theory, and corporate branding
           </h4>
@@ -44,7 +44,7 @@ function Experience() {
         <VerticalTimelineElement
           icon={<IconByTitle title="1C" />}
           iconClassName="timeline-icon"
-          date="2020 — Present"
+          date="2022 — 2023"
           dateClassName="timeline-date"
           onTimelineElementClick={(e) => handleSubtextToggle(e)}
         >
@@ -52,8 +52,30 @@ function Experience() {
           <h4 className="subtext timeline-h4">
             1C Software Developer, Professional in Technical Solutions
           </h4>
-          <TextToTags text="SQL, 1C infostructure, transactions, solid, SKD" />
+          <TextToTags text="SQL, 1C, transactions, acid, DataBases" />
         </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          icon={<IconByTitle title="React" />}
+          iconClassName="timeline-icon"
+          date="2023 — present"
+          dateClassName="timeline-date"
+          onTimelineElementClick={(e) => handleSubtextToggle(e)}
+        >
+          <h3 className="timeline-h3">React intusiast</h3>
+          <h4 className="subtext timeline-h4">
+            Javascript, React, Redux and other frontend libraries
+          </h4>
+          <TextToTags text="JS, React, SPA, frontend,  Tailwind" />
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          icon={<Icon icon="healthicons:question-outline" />}
+          iconClassName="timeline-icon"
+          date={`${new Date().toLocaleDateString()} — Your team?`}
+          dateClassName="timeline-date"
+          onTimelineElementClick={(e) => handleSubtextToggle(e)}
+        />
       </VerticalTimeline>
     </section>
   );

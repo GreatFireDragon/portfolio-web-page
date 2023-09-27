@@ -19,7 +19,7 @@
   }
 
   .timeline-h3 {
-    @apply text-base font-bold cursor-pointer sm:text-lg md:text-xl;
+    @apply text-base font-bold uppercase cursor-pointer sm:text-lg md:text-xl;
   }
   .timeline-h4 {
     @apply text-sm italic font-light cursor-pointer sm:text-lg text-stone-400 md:text-xl;
@@ -33,7 +33,7 @@
   }
 
   .timeline-date {
-    @apply sm:mx-3 md:mx-5;
+    @apply capitalize sm:mx-3 md:mx-5;
   }
 
   /* skill shine effect */
@@ -61,20 +61,31 @@
     left: 250px;
     background: rgba(255, 255, 255, 0.2);
   }
-}
 
-#carousel-track {
-  animation: slide calc(15s * var(--windowRatio)) linear infinite;
-  &:hover {
-    animation-play-state: paused;
+  /* github corner */
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
   }
-}
-
-@keyframes slide {
-  0% {
-    left: 100%;
+  @keyframes octocat-wave {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    20%,
+    60% {
+      transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+      transform: rotate(10deg);
+    }
   }
-  100% {
-    left: calc(var(--carousel-track-width));
+  @media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+      animation: none;
+    }
+    .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
   }
 }
