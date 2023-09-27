@@ -1,8 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 
 function Header() {
-  console.log(`height: ${window.innerHeight}px`);
-
   return (
     <header
       className="flex flex-col items-center justify-center bg-cyan-100"

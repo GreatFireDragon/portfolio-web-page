@@ -8,11 +8,58 @@
   --color-bg: #cffafe;
   --color-white: #ecfeff;
   --color-black: #172554;
+
+  --carousel-track-width: "----";
+  --windowRatio: "1";
 }
 
 /* define tailwind class that combines a lot of other tailwind classes */
 @layer components {
   .timeline-h3 {
     @apply px-4 py-2 text-sm;
+  }
+
+  /* button shine */
+  .box {
+    position: absolute;
+
+    /* transform: translate(-50%, -50%); */
+
+    overflow: hidden;
+    border-radius: 10%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg);
+    transition: 0.5s;
+  }
+
+  .box:hover:before {
+    left: 250px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+#carousel-track {
+  animation: slide calc(15s * var(--windowRatio)) linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: calc(var(--carousel-track-width));
   }
 }

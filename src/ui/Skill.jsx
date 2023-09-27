@@ -4,7 +4,7 @@ function Skill(props) {
   const { el } = props;
 
   return (
-    <span className="flex flex-col items-center px-3 py-2 transition-all hover:scale-105 rounded-xl bg-cyan-50">
+    <span className="relative flex flex-col items-center px-3 py-2 transition-all box rounded-xl bg-amber-500">
       <span className="text-5xl sm:text-6xl md:text-9xl">
         <Icon icon={el.icon}></Icon>
       </span>
