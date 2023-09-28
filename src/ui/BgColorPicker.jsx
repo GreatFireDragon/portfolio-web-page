@@ -49,7 +49,7 @@ function BgColorPicker() {
     <div className="absolute text-right top-5 right-3">
       <div
         onClick={handleButtonClick}
-        className="inline-block p-1 md:p-1.5 shadow-md cursor-pointer w-min bg-slate-50"
+        className="inline-block p-1 md:p-1.5 hover:scale-105 shadow-md cursor-pointer w-min bg-slate-50"
       >
         <div
           className="w-8 h-5 rounded-sm sm:w-12 sm:h-7 md:w-16 md:h-8"
