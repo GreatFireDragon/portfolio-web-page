@@ -15,7 +15,7 @@ function Header() {
         <Icon
           icon={
             // get random emote
-            themes[emoji][Math.floor(themes[emoji].length * Math.random())]
+            themes.at(emoji).at(Math.floor(themes?.at(emoji).length * Math.random()))
           }
         />
       </span>
