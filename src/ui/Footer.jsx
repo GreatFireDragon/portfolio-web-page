@@ -6,7 +6,7 @@ function Footer() {
         {new Date().getFullYear() !== 2023 && `- ${new Date().getFullYear()}`}
       </span>
       <span className="text-xs sm:text-sm md:text-base opacity-30">
-        inpired by&nbsp;
+        inspired by&nbsp;
         <a href="https://dorota1997.github.io/react-frontend-dev-portfolio/">
           Davina Griss
         </a>

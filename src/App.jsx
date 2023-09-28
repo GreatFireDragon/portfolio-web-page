@@ -9,6 +9,7 @@
 // import Footer from "./ui/Footer";
 
 import { lazy, Suspense } from "react";
+import Loader from "./ui/Loader";
 
 const GithubCorner = lazy(() => import("./ui/GithubCorner"));
 const EmojiPicker = lazy(() => import("./ui/EmojiPicker"));
@@ -22,7 +23,7 @@ const Footer = lazy(() => import("./ui/Footer"));
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <GithubCorner />
       <EmojiPicker />
       <BgColorPicker />

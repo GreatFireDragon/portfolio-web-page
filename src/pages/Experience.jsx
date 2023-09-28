@@ -65,7 +65,7 @@ function Experience() {
           dateClassName="timeline-date"
           onTimelineElementClick={(e) => handleSubtextToggle(e)}
         >
-          <h3 className="timeline-h3">React intusiast</h3>
+          <h3 className="timeline-h3">React enthusiast</h3>
           <h4 className="subtext timeline-h4">
             Javascript, React, Redux and other frontend libraries
           </h4>
