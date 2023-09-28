@@ -4,25 +4,30 @@ import Lightbox from "react-spring-lightbox";
 import { useKeyPress } from "../../utils/useKeyPress";
 import { Icon } from "@iconify/react";
 import styles from "./Achievements.module.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const images = [
   {
     src: "/sertificate-EPT.png",
+    placeholderSrc: "/small/sertificate-EPT.png",
     loading: "lazy",
     title: "English level setificate B2 ",
   },
   {
     src: "/sertificate-JS.png",
+    placeholderSrc: "/small/sertificate-JS.png",
     loading: "lazy",
     title: "JavaScript Sertificate",
   },
   {
     src: "/sertificate-profka2.png",
+    placeholderSrc: "/small/sertificate-profka2.png",
     loading: "lazy",
     title: "1C:Technology Professional",
   },
   {
     src: "/sertificate-profka.png",
+    placeholderSrc: "/small/sertificate-profka.png",
     loading: "lazy",
     title: "1C:Professional",
   },
@@ -92,9 +97,10 @@ function Achievements() {
         {images.map((img) => (
           <div key={img.title} className={styles.box}>
             <div className="flex flex-row flex-wrap justify-center w-64 gap-3 py-3 rounded-md md:w-96 sm:rounded-2xl sm:px-4 sm:py-5 bg-zinc-800">
-              <img
+              <LazyLoadImage
                 className="object-cover h-48 md:h-72  w-[100%] cursor-zoom-in"
                 src={img.src}
+                placeholderSrc={img.placeholderSrc}
                 alt={img.title}
                 onClick={() => {
                   setOpenImage(true);

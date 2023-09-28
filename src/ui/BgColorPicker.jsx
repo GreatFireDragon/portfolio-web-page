@@ -20,7 +20,7 @@ function BgColorPicker() {
   const [bgColor, setBgColor] = useLocalStorage("bgColor", initialBgColor);
   const [displayColorPicker, setDisplayColorPicker] = useLocalStorage(
     "displayColorPicker",
-    true
+    false
   );
 
   // tutorial for color picker

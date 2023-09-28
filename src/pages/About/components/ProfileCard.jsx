@@ -3,6 +3,7 @@ import styles from "./ProfileCard.module.css";
 import TextExpander from "./TextExpander";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ProfileCard({ className }) {
   const [bgColor] = useLocalStorage("bgColor");
@@ -25,10 +26,11 @@ export default function ProfileCard({ className }) {
         style={{ backgroundColor: bgColor }}
         className="flex flex-col items-center justify-center px-5 py-3 text-center md:px-16 md:py-10 "
       >
-        <img
+        <LazyLoadImage
           className="object-cover w-48 h-48 rounded-3xl"
           alt="ProfileImg"
           src="/resume_pic.png"
+          placeholderSrc="/small/resume_pic.png"
         />
         <div className="w-48 ">
           <div className="font-bold uppercase">Kuleshov Mikhail</div>
