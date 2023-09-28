@@ -13,6 +13,9 @@
     --color-green: theme(colors.green.400);
     --color-yellow: theme(colors.yellow.400);
     --color-purple: theme(colors.purple.400);
+
+    --scrollbar-color: theme(colors.zinc.400);
+    --scrollbar-color-hover: theme(colors.zinc.500);
   }
 
   .timeline-h3 {
@@ -58,5 +61,27 @@
     .github-corner .octo-arm {
       animation: octocat-wave 560ms ease-in-out;
     }
+  }
+
+  /* SCROLLBAR */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-color-hover);
   }
 }
