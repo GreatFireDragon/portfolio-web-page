@@ -20,7 +20,14 @@ function Skills() {
   };
 
   return (
-    <div className="px-8 py-32 overflow-hidden bg-zinc-800 text-zinc-800 sm:py-44 md:py-60 sm:px-12 md:px-16">
+    <div className="px-8 py-20 overflow-hidden bg-zinc-800 text-zinc-800 sm:pb-44 md:pt-32 sm:px-12 md:px-16">
+      <h1
+        style={{ color: bgColor }}
+        className="pb-20 text-4xl font-bold tracking-widest text-center uppercase"
+      >
+        skills
+      </h1>
+
       <DragDropContext onDragEnd={handleDrop}>
         <Droppable droppableId="list-container" direction="horizontal">
           {(provided) => (
